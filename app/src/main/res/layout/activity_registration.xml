@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ScrollView"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout style="@style/LinearBaseLayout">
+
+        <ImageView
+            style="@style/LogoStyle"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/logo" />
+
+        <!--  Name Label -->
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/NameField"
+            android:hint="@string/name" />
+        <!--  Address Label -->
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/AddressField"
+            android:hint="@string/address" />
+        <!--  Phone Label -->
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/PhoneField"
+            android:hint="@string/phone" />
+        <!--  Email Label -->
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/EmailField"
+            android:hint="@string/enter_your_e_mail" />
+
+        <!--  Password Label -->
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/PasswordField"
+            android:hint="@string/password" />
+        <!--  Re-Password Label -->
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/RePassword"
+            android:hint="@string/re_enter_password" />
+
+        <!--  Button CreateBtn -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login"
+            style="@style/CreateBtn"
+            android:text="@string/create_account" />
+        <!--  Button Login -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/link_signup"
+            style="@style/ExistingAccount"
+            android:text="@string/already_a_member_login" />
+
+    </LinearLayout>
+</ScrollView>
