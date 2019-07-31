@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.loginregistrationmodel.MainActivity;
 import com.example.loginregistrationmodel.R;
+import com.example.loginregistrationmodel.UserRegistration.Registration;
 
 import es.dmoral.toasty.Toasty;
 
@@ -19,6 +20,7 @@ public class LogIn extends AppCompatActivity implements Contract.View {
     EditText email;
     EditText password;
     Button loginBtn;
+    Button registrationBtn;
     LoginPresenter loginPresenter;
 
 
@@ -30,6 +32,7 @@ public class LogIn extends AppCompatActivity implements Contract.View {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         loginBtn = findViewById(R.id.btn_login);
+        registrationBtn = findViewById(R.id.link_signUp);
 
         loginPresenter = new LoginPresenter((Contract.View) this);
 
@@ -44,6 +47,13 @@ public class LogIn extends AppCompatActivity implements Contract.View {
                 }
                 loginPresenter.showSuccessToast("Login Successful");
 
+            }
+        });
+
+        registrationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoRegistrationActivity();
             }
         });
 
@@ -80,6 +90,12 @@ public class LogIn extends AppCompatActivity implements Contract.View {
     @Override
     public void startHomeActivity() {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void gotoRegistrationActivity() {
+        Intent intent = new Intent(this, Registration.class);
         startActivity(intent);
     }
 }
